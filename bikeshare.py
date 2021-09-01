@@ -159,6 +159,7 @@ def user_stats(df):
     print('-'*40)
 
 
+# To view 5 rows from data
 def display_raw(df):
     raw = 0
     while True:
