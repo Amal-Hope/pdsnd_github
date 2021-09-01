@@ -5,7 +5,9 @@ import numpy as np
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
-
+month_f = ['january', 'february', 'march', 'april', 'may', 'june', 'all']
+day_f = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday',
+          'saturday', 'sunday', 'all']
 def get_filters():
     """
     Asks user to specify a city, month, and day to analyze.
@@ -29,7 +31,7 @@ def get_filters():
     while True:
         month = input("\nWant from you choose month from the six first months "
                       "January to June to filter it or all for 'all'?\n").lower()
-        if month in('january', 'february', 'march', 'april', 'may', 'june', 'all'):
+        if month in month_f:
             break
         else:
             print("\nSorry, choice month from the six first!")
@@ -37,13 +39,12 @@ def get_filters():
     # get user input for day of week (all, monday, tuesday, ... sunday)
     while True:
         day = input("\nwhich day you will to filter or type 'all' for all?\n").lower()
-        if day in('monday', 'tuesday', 'wednesday', 'thursday', 'friday',
-                  'saturday', 'sunday', 'all'):
+        if day in day_f:
             break
         else:
             print("\nSorry, type day name correct!")
 
-    print('-'*40)
+    print('-'*60)
     return city, month, day
 
 
