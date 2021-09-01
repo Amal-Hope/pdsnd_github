@@ -166,10 +166,11 @@ def display_raw(df):
         display = input("\nDo you want to display five new lines of data? y/n: \n").lower()
         if display == "y":
             print(df[raw:raw+5])
+            # To add 5 rows in data
             raw += 5
         elif display == "n":
             break
-        else:
+         else:
             print("Please enter 'y' or 'n' !!")
 
 
