@@ -159,16 +159,18 @@ def user_stats(df):
     print('-'*40)
 
 
+# To view 5 rows from data
 def display_raw(df):
     raw = 0
     while True:
         display = input("\nDo you want to display five new lines of data? y/n: \n").lower()
         if display == "y":
             print(df[raw:raw+5])
+            # To add 5 rows in data
             raw += 5
         elif display == "n":
             break
-        else:
+         else:
             print("Please enter 'y' or 'n' !!")
 
 
